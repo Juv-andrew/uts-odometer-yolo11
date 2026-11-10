@@ -1,0 +1,8 @@
+Pemeriksaan,Jumlah
+Foto sumber sama di train dan valid,0
+Foto sumber sama di train dan test,0
+Foto sumber sama di valid dan test,0
+Gambar duplikat persis lintas split (MD5),0
+Salinan oversampling di valid/test (tahap 1),0
+Salinan oversampling di valid/test (tahap 2),0
+Potongan tahap 2 yang berasal dari split lain,0

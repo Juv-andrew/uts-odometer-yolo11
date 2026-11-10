@@ -1,0 +1,28 @@
+Parameter,Nilai
+batch,16
+imgsz,640
+optimizer,AdamW
+lr0,0.001
+lrf,0.01
+momentum,0.937
+weight_decay,0.0005
+warmup_epochs,3
+box,7.5
+cls,0.5
+dfl,1.5
+hsv_h,0.015
+hsv_s,0.7
+hsv_v,0.4
+degrees,5
+translate,0.1
+scale,0.5
+fliplr,0.0
+flipud,0.0
+mosaic,1.0
+close_mosaic,10
+seed,42
+deterministic,True
+workers,2
+epochs (tahap 1 / tahap 2),50 / 80
+patience (tahap 1 / tahap 2),10 / 15
+bobot awal,yolo11s.pt (COCO)

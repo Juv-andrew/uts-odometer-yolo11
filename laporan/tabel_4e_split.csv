@@ -1,0 +1,4 @@
+Split,Jumlah gambar,Jumlah box,Persen gambar (%)
+train,1635,22674,70.0
+valid,470,6593,20.1
+test,232,3332,9.9

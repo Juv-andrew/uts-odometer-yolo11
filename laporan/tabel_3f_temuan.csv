@@ -1,0 +1,8 @@
+Temuan,Bukti dari data,Dampak ke preprocessing
+Objek sangat kecil,"68.8% box < 0,1% luas gambar; median luas digit 0.00051",Tahap 2: potong panel dari resolusi asli agar digit membesar; tanpa crop acak yang memotong digit
+Panel odometer selalu ada dan besar,2337 panel; median luas 0.022,"Panel mudah dideteksi, cocok sebagai tahap 1 untuk menentukan area potongan"
+Ketidakseimbangan kelas,Rasio 11.2:1 ('X' vs '-'),Oversampling kelas '-' pada train (kedua tahap); evaluasi per kelas
+Banyak objek rapat per gambar,"Rata-rata 13.9, maks 33 objek/gambar",max_det 300 saat inferensi
+Posisi objek terkonsentrasi di tengah,"x=0.49, y=0.52",Augmentasi translasi dan skala
+Resolusi gambar beragam,111 ukuran berbeda,Letterbox 640 untuk tahap 1; potongan diletterbox otomatis untuk tahap 2
+Risiko kebocoran data,Foto sumber sama di split berbeda: 0,Dataset tahap 2 mewarisi split asli

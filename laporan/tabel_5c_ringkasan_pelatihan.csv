@@ -1,0 +1,3 @@
+Model,Epoch dijalankan,Epoch terbaik,Early stopping,mAP50 val,mAP50-95 val,box_loss train,box_loss val,Selisih (val-train)
+Tahap 1 (panel),50,50,Tidak,0.913,0.6408,0.8434,0.9795,0.136
+Tahap 2 (digit),70,55,Ya,0.9837,0.7427,0.6528,0.9608,0.308

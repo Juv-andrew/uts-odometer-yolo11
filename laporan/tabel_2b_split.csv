@@ -1,0 +1,5 @@
+Split,Jumlah gambar,Jumlah bounding box,Persentase gambar (%)
+train,1635,22674,70.0
+valid,470,6593,20.1
+test,232,3332,9.9
+Total,2337,32599,100.0

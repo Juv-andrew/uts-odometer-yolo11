@@ -1,0 +1,10 @@
+Pemeriksaan,Jumlah ditemukan,Tindakan
+Gambar rusak (tidak bisa dibuka),0,Tidak perlu tindakan
+Gambar duplikat persis (MD5),0,Tidak perlu tindakan
+Duplikat lintas split,0,Tidak perlu tindakan
+Gambar tanpa file label,0,Tidak perlu tindakan
+File label kosong,0,Tidak perlu tindakan
+class_id di luar rentang kelas,0,Tidak perlu tindakan
+Koordinat box di luar 0-1,0,Tidak perlu tindakan
+Box lebar/tinggi <= 0,0,Tidak perlu tindakan
+Box duplikat (kelas dan koordinat sama),0,Tidak perlu tindakan

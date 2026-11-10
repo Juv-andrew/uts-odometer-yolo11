@@ -1,0 +1,3 @@
+Tahap,Tipe data,Nilai min,Nilai maks,Rata-rata
+Sebelum rescale,uint8,0.0,255.0,56.01
+Sesudah rescale (/255),float32,0.0,1.0,0.22

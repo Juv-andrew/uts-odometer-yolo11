@@ -1,0 +1,8 @@
+Skenario,Ukuran total (MB),Latensi CPU (ms/foto),Exact match digit,Exact match semua simbol,CER digit,Benar (gambar),Gambar ditolak
+"S1: 1 tahap, PyTorch, conf 0,25",19.1865,127.966,0.5259,0.3017,0.1183,122.0,0.0
+"S2: 1 tahap, PyTorch, conf optimal",19.1865,127.8951,0.5302,0.306,0.1294,123.0,0.0
+"S3: 1 tahap, INT8 selektif (Tugas 1)",15.3709,149.9933,0.5216,0.2974,0.1299,121.0,0.0
+"S4: 2 tahap, tanpa model tahap 2",19.1865,203.0539,0.4138,0.3103,0.2342,96.0,0.0
+"S5: 2 tahap, PyTorch, conf 0,25",38.3641,237.2079,0.7112,0.6638,0.0575,165.0,0.0
+"S6: 2 tahap, PyTorch, conf optimal",38.3641,234.2865,0.7716,0.7198,0.0468,179.0,0.0
+"S7: 2 tahap, INT8 selektif (UTS)",30.7403,315.8557,0.7629,0.7241,0.0488,177.0,0.0

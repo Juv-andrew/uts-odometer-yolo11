@@ -1,0 +1,206 @@
+{
+  "GPU": {
+    "nama": "Tesla T4",
+    "vram_gb": 15.6,
+    "cuda": "13.0"
+  },
+  "REAL_WORLD": {
+    "file_timestamp": 2337,
+    "total": 2337
+  },
+  "DATASET_CROP": {
+    "train": {
+      "potongan": 2487,
+      "objek": 34983,
+      "tanpa_panel": 0
+    },
+    "valid": {
+      "potongan": 470,
+      "objek": 6102,
+      "tanpa_panel": 0
+    },
+    "test": {
+      "potongan": 232,
+      "objek": 3100,
+      "tanpa_panel": 0
+    }
+  },
+  "TINGGI_DIGIT": {
+    "foto_utuh_px": 13.925000000000018,
+    "potongan_px": 52.41284645161291,
+    "kali": 3.7639387038860206
+  },
+  "ARSITEKTUR": {
+    "param_tahap1": 9432823,
+    "param_tahap2": 9432436,
+    "param_c2psa": 990976,
+    "porsi_c2psa_persen": 10.506045310034438,
+    "output_head_tahap1": "[(17, 8400)]",
+    "output_head_tahap2": "[(16, 8400)]"
+  },
+  "PELATIHAN": {
+    "Tahap 1 (panel)": {
+      "Epoch dijalankan": 50,
+      "Epoch terbaik": 50,
+      "Early stopping": "Tidak",
+      "mAP50 val": 0.913,
+      "mAP50-95 val": 0.6408,
+      "box_loss train": 0.8434,
+      "box_loss val": 0.9795,
+      "Selisih (val-train)": 0.136
+    },
+    "Tahap 2 (digit)": {
+      "Epoch dijalankan": 70,
+      "Epoch terbaik": 55,
+      "Early stopping": "Ya",
+      "mAP50 val": 0.9837,
+      "mAP50-95 val": 0.7427,
+      "box_loss train": 0.6528,
+      "box_loss val": 0.9608,
+      "Selisih (val-train)": 0.308
+    }
+  },
+  "THRESHOLD": {
+    "conf1": 0.43843843843843844,
+    "f1_val1": 0.9008300945633546,
+    "conf2": 0.4174174174174174,
+    "f1_val2": 0.9747875334606448
+  },
+  "UKURAN": {
+    "s1_pt": 19.186458,
+    "s1_fp32": 37.946971,
+    "s1_int8": 15.370941,
+    "s2_pt": 19.177626,
+    "s2_fp32": 37.94541,
+    "s2_int8": 15.369394
+  },
+  "FORMAT_TAHAP2": {
+    "PyTorch (.pt)": {
+      "Ukuran (MB)": 19.1776,
+      "Latensi CPU (ms/potongan)": 107.6062,
+      "mAP50": 0.9836,
+      "mAP50-95": 0.7405,
+      "Precision": 0.9753,
+      "Recall": 0.9709,
+      "F1": 0.973
+    },
+    "ONNX FP32": {
+      "Ukuran (MB)": 37.9454,
+      "Latensi CPU (ms/potongan)": 144.7627,
+      "mAP50": 0.9834,
+      "mAP50-95": 0.7417,
+      "Precision": 0.974,
+      "Recall": 0.971,
+      "F1": 0.9724
+    },
+    "ONNX INT8 selektif": {
+      "Ukuran (MB)": 15.3694,
+      "Latensi CPU (ms/potongan)": 145.1192,
+      "mAP50": 0.9849,
+      "mAP50-95": 0.7409,
+      "Precision": 0.9744,
+      "Recall": 0.9718,
+      "F1": 0.973
+    }
+  },
+  "METRIK_TEST": {
+    "Tahap 1: pendeteksi panel (foto utuh)": {
+      "Precision": 0.9464,
+      "Recall": 0.8354,
+      "F1": 0.8761,
+      "mAP50": 0.8889,
+      "mAP50-95": 0.6325
+    },
+    "Tahap 2: pembaca digit (potongan panel)": {
+      "Precision": 0.9757,
+      "Recall": 0.971,
+      "F1": 0.9732,
+      "mAP50": 0.9837,
+      "mAP50-95": 0.7413
+    }
+  },
+  "PANEL_RECALL": 1.0,
+  "SKENARIO": {
+    "S1: 1 tahap, PyTorch, conf 0,25": {
+      "Ukuran total (MB)": 19.1865,
+      "Latensi CPU (ms/foto)": 127.966,
+      "Exact match digit": 0.5259,
+      "Exact match semua simbol": 0.3017,
+      "CER digit": 0.1183,
+      "Benar (gambar)": 122.0,
+      "Gambar ditolak": 0.0
+    },
+    "S2: 1 tahap, PyTorch, conf optimal": {
+      "Ukuran total (MB)": 19.1865,
+      "Latensi CPU (ms/foto)": 127.8951,
+      "Exact match digit": 0.5302,
+      "Exact match semua simbol": 0.306,
+      "CER digit": 0.1294,
+      "Benar (gambar)": 123.0,
+      "Gambar ditolak": 0.0
+    },
+    "S3: 1 tahap, INT8 selektif (Tugas 1)": {
+      "Ukuran total (MB)": 15.3709,
+      "Latensi CPU (ms/foto)": 149.9933,
+      "Exact match digit": 0.5216,
+      "Exact match semua simbol": 0.2974,
+      "CER digit": 0.1299,
+      "Benar (gambar)": 121.0,
+      "Gambar ditolak": 0.0
+    },
+    "S4: 2 tahap, tanpa model tahap 2": {
+      "Ukuran total (MB)": 19.1865,
+      "Latensi CPU (ms/foto)": 203.0539,
+      "Exact match digit": 0.4138,
+      "Exact match semua simbol": 0.3103,
+      "CER digit": 0.2342,
+      "Benar (gambar)": 96.0,
+      "Gambar ditolak": 0.0
+    },
+    "S5: 2 tahap, PyTorch, conf 0,25": {
+      "Ukuran total (MB)": 38.3641,
+      "Latensi CPU (ms/foto)": 237.2079,
+      "Exact match digit": 0.7112,
+      "Exact match semua simbol": 0.6638,
+      "CER digit": 0.0575,
+      "Benar (gambar)": 165.0,
+      "Gambar ditolak": 0.0
+    },
+    "S6: 2 tahap, PyTorch, conf optimal": {
+      "Ukuran total (MB)": 38.3641,
+      "Latensi CPU (ms/foto)": 234.2865,
+      "Exact match digit": 0.7716,
+      "Exact match semua simbol": 0.7198,
+      "CER digit": 0.0468,
+      "Benar (gambar)": 179.0,
+      "Gambar ditolak": 0.0
+    },
+    "S7: 2 tahap, INT8 selektif (UTS)": {
+      "Ukuran total (MB)": 30.7403,
+      "Latensi CPU (ms/foto)": 315.8557,
+      "Exact match digit": 0.7629,
+      "Exact match semua simbol": 0.7241,
+      "CER digit": 0.0488,
+      "Benar (gambar)": 177.0,
+      "Gambar ditolak": 0.0
+    }
+  },
+  "UTS_VS_T1": {
+    "membaik": 72,
+    "memburuk": 16
+  },
+  "JENIS_KESALAHAN": {
+    "Tugas 1 (S3)": {
+      "Salah baca": 111,
+      "Digit kurang": 78,
+      "Digit berlebih": 16,
+      "Panjang sama, beda digit": 17
+    },
+    "UTS (S7)": {
+      "Salah baca": 55,
+      "Digit kurang": 16,
+      "Digit berlebih": 29,
+      "Panjang sama, beda digit": 10
+    }
+  }
+}

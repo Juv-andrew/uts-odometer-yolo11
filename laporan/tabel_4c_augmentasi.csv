@@ -1,0 +1,9 @@
+Jenis augmentasi,Parameter,Alasan
+Perubahan warna HSV,"hsv_h=0.015, hsv_s=0.7, hsv_v=0.4",Variasi pencahayaan dan warna layar dashboard
+Rotasi,degrees=5,Odometer difoto agak miring
+Translasi,translate=0.1,Posisi objek di gambar bervariasi
+Skala,scale=0.5,Variasi jarak pengambilan foto
+Mosaic,mosaic=1.0 (dimatikan 10 epoch terakhir),Menambah variasi konteks dan jumlah objek per gambar
+Flip horizontal,fliplr=0.0 (dimatikan),Digit tercermin dan urutan angka berubah
+Flip vertikal,flipud=0.0 (dimatikan),Digit terbalik tidak realistis
+Margin & geseran potongan (tahap 2),"margin 10-40%, geser ±5%",Meniru ketidakpresisian kotak panel dari tahap 1

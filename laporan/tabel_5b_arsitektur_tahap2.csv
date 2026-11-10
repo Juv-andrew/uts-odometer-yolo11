@@ -1,0 +1,25 @@
+Layer,Bagian,Blok,"Ukuran output (C,H,W)",Parameter
+0,Backbone,Conv,"(32, 320, 320)",928
+1,Backbone,Conv,"(64, 160, 160)",18560
+2,Backbone,C3k2,"(128, 160, 160)",26080
+3,Backbone,Conv,"(128, 80, 80)",147712
+4,Backbone,C3k2,"(256, 80, 80)",103360
+5,Backbone,Conv,"(256, 40, 40)",590336
+6,Backbone,C3k2,"(256, 40, 40)",346112
+7,Backbone,Conv,"(512, 20, 20)",1180672
+8,Backbone,C3k2,"(512, 20, 20)",1380352
+9,Backbone,SPPF,"(512, 20, 20)",656896
+10,Backbone,C2PSA,"(512, 20, 20)",990976
+11,Neck,Upsample,"(512, 40, 40)",0
+12,Neck,Concat,"(768, 40, 40)",0
+13,Neck,C3k2,"(256, 40, 40)",443776
+14,Neck,Upsample,"(256, 80, 80)",0
+15,Neck,Concat,"(512, 80, 80)",0
+16,Neck,C3k2,"(128, 80, 80)",127680
+17,Neck,Conv,"(128, 40, 40)",147712
+18,Neck,Concat,"(384, 40, 40)",0
+19,Neck,C3k2,"(256, 40, 40)",345472
+20,Neck,Conv,"(256, 20, 20)",590336
+21,Neck,Concat,"(768, 20, 20)",0
+22,Neck,C3k2,"(512, 20, 20)",1511424
+23,Head,Detect,"[(16, 8400)]",824052
